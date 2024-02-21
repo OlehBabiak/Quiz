@@ -1,7 +1,31 @@
 import React, { FC } from 'react';
+import MenuButton from 'shared/components/button/MenuButton';
+import { v4 as uuidv4 } from 'uuid';
+import PageQuestionComponent from 'shared/components/page-question/PageQuestionComponent';
+import { IPageOptions } from 'shared/i18n/copies/types';
+import { useTranslation } from 'react-i18next';
 
 const IdentifyPage: FC = () => {
-  return <div>IdentifyPage</div>;
+  const { t } = useTranslation();
+  const handleLanguageChange = (value: string) => {
+    console.log('handleLanguageChange');
+  };
+
+  return (
+    <>
+      <PageQuestionComponent
+        question={t('page2.title')}
+        action={t('page2.text')}
+      />
+      {JSON.parse(t('page2.options')).map(({ value }: IPageOptions) => (
+        <MenuButton
+          key={value + uuidv4()}
+          title={value}
+          onClick={() => handleLanguageChange(value)}
+        />
+      ))}
+    </>
+  );
 };
 
 export default IdentifyPage;

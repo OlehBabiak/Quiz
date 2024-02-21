@@ -20,3 +20,5 @@ export const AVAILABLE_LANGUAGES: Language[] = [
   { lang: LANGUAGES_NAMES.SPANISH },
   { lang: LANGUAGES_NAMES.FRENCH },
 ];
+
+export const DEFAULT_LANGUAGE = ISO_CODES.EN;

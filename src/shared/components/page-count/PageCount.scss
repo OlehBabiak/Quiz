@@ -1,0 +1,18 @@
+@import "shared/styles/common/index";
+@import "shared/styles/constants/index";
+
+.count {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    p {
+        font-family: $Albert;
+        font-size: $font-medium-plus;
+        font-weight: $font-weight-800;
+        line-height: $line-height20;
+
+        .firs-value {
+            color: $purple200;
+        }
+    }
+}

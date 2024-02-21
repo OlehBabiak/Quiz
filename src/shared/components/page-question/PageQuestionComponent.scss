@@ -1,0 +1,24 @@
+@import "shared/styles/constants/index";
+
+
+.questionStyle {
+  margin-bottom: 20px;
+  padding: 40px 10px 10px 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  p {
+    text-align: center;
+  }
+
+  p:first-child {
+    font-size: $font-large0;
+    font-weight: $font-weight-700;
+  }
+
+  p:last-child {
+    margin-top: 15px;
+    font-size: $font-medium;
+  }
+}

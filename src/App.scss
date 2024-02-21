@@ -1,0 +1,21 @@
+@use 'sass:math';
+@use 'sass:string';
+
+@import 'shared/styles/common';
+@import 'shared/styles/constants';
+
+.content {
+    display: none;
+}
+
+@media only screen and (max-width: $site-content-container-width) {
+    body {
+        background-color: $purple900;
+        color: $defaultWhite;
+        padding: 40px;
+    }
+
+    .content {
+        display: block;
+      }
+  }
