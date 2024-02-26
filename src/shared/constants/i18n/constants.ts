@@ -15,10 +15,10 @@ export const enum LANGUAGES_NAMES {
 }
 
 export const AVAILABLE_LANGUAGES: Language[] = [
-  { lang: LANGUAGES_NAMES.ENGLISH },
-  { lang: LANGUAGES_NAMES.GERMAN },
-  { lang: LANGUAGES_NAMES.SPANISH },
-  { lang: LANGUAGES_NAMES.FRENCH },
+  { lang: LANGUAGES_NAMES.ENGLISH, iso: ISO_CODES.EN },
+  { lang: LANGUAGES_NAMES.GERMAN, iso: ISO_CODES.DE },
+  { lang: LANGUAGES_NAMES.SPANISH, iso: ISO_CODES.SP },
+  { lang: LANGUAGES_NAMES.FRENCH, iso: ISO_CODES.FR },
 ];
 
 export const DEFAULT_LANGUAGE = ISO_CODES.EN;

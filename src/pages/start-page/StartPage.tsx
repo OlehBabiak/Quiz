@@ -13,7 +13,6 @@ const StartPage: FC = () => {
   const { t } = useTranslation();
 
   const handleLanguageChange = (language: string) => {
-    console.log('language', language);
     i18next.changeLanguage(language);
     navigate(RouteNames.IDENTIFY);
   };

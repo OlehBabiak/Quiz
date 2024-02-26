@@ -1,3 +1,34 @@
+import { IPageOptions } from './types';
+
+const page2Options: IPageOptions[] = [
+  { value: 'Weiblich' },
+  { value: 'Männlich' },
+  { value: 'Ander' },
+];
+
+const page3Options: IPageOptions[] = [
+  { value: '18-19 jahren' },
+  { value: '30-39 jahren' },
+  { value: '40-49 jahren' },
+  { value: '50+' },
+];
+
+const page4Options: IPageOptions[] = [
+  { value: 'Mangel an Logik' },
+  { value: 'Langsam' },
+  { value: 'Mangel an Humor' },
+  { value: 'Viel zu generische Endung' },
+];
+const page5Options: IPageOptions[] = [
+  { value: 'Werwolf' },
+  { value: 'Handeln' },
+  { value: 'Royal Obsession' },
+  { value: 'Handeln' },
+  { value: 'Romantisch' },
+  { value: 'Young Adult' },
+  { value: 'Bad Boy' },
+];
+
 export const de = {
   page1: {
     title: 'Was ist Ihre bevorzugte Sprache?',
@@ -6,39 +37,21 @@ export const de = {
   page2: {
     title: 'Mit welchem Geschlecht identifizieren Sie sich?',
     text: 'Bitte teilen Sie mit, wie Sie sich identifizieren',
-    options: [{ 1: 'Weiblich' }, { 2: 'Männlich' }, { 3: 'Männlich' }],
+    options: JSON.stringify(page2Options),
   },
   page3: {
     title: 'Wie alt sind Sie?',
-    options: [
-      { 1: '18-19 jahren' },
-      { 2: '30-39 jahren' },
-      { 3: '40-49 jahren' },
-      { 4: '50+' },
-    ],
+    options: JSON.stringify(page3Options),
   },
   page4: {
     title: 'Was hasst du am meisten in einem Buch?',
-    options: [
-      { 1: 'Mangel an Logik' },
-      { 2: 'Langsam' },
-      { 3: 'Mangel an Humor' },
-      { 4: 'Viel zu generische Endung' },
-    ],
+    options: JSON.stringify(page4Options),
     button: 'Nächst',
   },
   page5: {
     title: 'Was sind deine Lieblingsthemen?',
     text: 'Wählen Sie bis zu 3 Themen, die Sie mögen',
-    options: [
-      { 1: 'Werwolf' },
-      { 2: 'Handeln' },
-      { 3: 'Royal Obsession' },
-      { 4: 'Handeln' },
-      { 5: 'Romantisch' },
-      { 6: 'Young Adult' },
-      { 7: 'Bad Boy' },
-    ],
+    options: JSON.stringify(page5Options),
     button: 'Nächst',
   },
   loadingPage: { text: 'Sammlungen für Sie finden...' },

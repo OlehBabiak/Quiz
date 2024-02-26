@@ -5,7 +5,7 @@ import './ProgressBar.scss';
 const ProgressBar: React.FC<IProgressBarProps> = ({ progress }) => {
   return (
     <div className="progress-bar">
-      <div className="progress" style={{ width: `${progress}%` }}></div>
+      <div className="progress" style={{ width: `${progress * 20}%` }}></div>
     </div>
   );
 };

@@ -4,11 +4,14 @@ import { v4 as uuidv4 } from 'uuid';
 import PageQuestionComponent from 'shared/components/page-question/PageQuestionComponent';
 import { IPageOptions } from 'shared/i18n/copies/types';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+import { RouteNames } from 'routes';
 
 const IdentifyPage: FC = () => {
   const { t } = useTranslation();
-  const handleLanguageChange = (value: string) => {
-    console.log('handleLanguageChange');
+  const navigate = useNavigate();
+  const handleOptionSelector = () => {
+    navigate(RouteNames.AGE);
   };
 
   return (
@@ -21,7 +24,7 @@ const IdentifyPage: FC = () => {
         <MenuButton
           key={value + uuidv4()}
           title={value}
-          onClick={() => handleLanguageChange(value)}
+          onClick={() => handleOptionSelector()}
         />
       ))}
     </>

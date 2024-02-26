@@ -1,14 +1,33 @@
-const page2Options = [
+import { IPageOptions } from './types';
+
+const page2Options: IPageOptions[] = [
   { value: 'Female' },
   { value: 'Male' },
   { value: 'Other' },
 ];
 
-const page3Options = [
-  { 1: '18-19 years' },
-  { 2: '30-39 years' },
-  { 3: '40-49 years' },
-  { 4: '50+' },
+const page3Options: IPageOptions[] = [
+  { value: '18-19 years' },
+  { value: '30-39 years' },
+  { value: '40-49 years' },
+  { value: '50+' },
+];
+
+const page4Options: IPageOptions[] = [
+  { value: 'Lack of logic' },
+  { value: 'A slow speed' },
+  { value: 'Lack of humor' },
+  { value: 'Way too generic ending' },
+];
+
+const page5Options: IPageOptions[] = [
+  { value: 'Werewolf' },
+  { value: 'Action' },
+  { value: 'Royal Obsession' },
+  { value: 'Billionaire' },
+  { value: 'Romance' },
+  { value: 'Young Adult' },
+  { value: 'Bad Boy' },
 ];
 
 export const en = {
@@ -27,26 +46,13 @@ export const en = {
   },
   page4: {
     title: 'What do you hate the most in a book?',
-    options: [
-      { 1: 'Lack of logic' },
-      { 2: 'A slow speed' },
-      { 3: 'Lack of humor' },
-      { 4: 'Way too generic ending' },
-    ],
+    options: JSON.stringify(page4Options),
     button: 'Next',
   },
   page5: {
     title: 'What are your favorite topics?',
     text: 'Choose up to 3 topics you like',
-    options: [
-      { 1: 'Werewolf' },
-      { 2: 'Action' },
-      { 3: 'Royal Obsession' },
-      { 4: 'Billionaire' },
-      { 5: 'Romance' },
-      { 6: 'Young Adult' },
-      { 7: 'Bad Boy' },
-    ],
+    options: JSON.stringify(page5Options),
     button: 'Next',
   },
   loadingPage: { text: 'Finding collections for you...' },

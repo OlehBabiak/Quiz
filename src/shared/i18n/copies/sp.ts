@@ -1,40 +1,54 @@
+import { IPageOptions } from './types';
+
+const page2Options: IPageOptions[] = [
+  { value: 'Femenino' },
+  { value: 'Masculino' },
+  { value: 'Otro' },
+];
+
+const page3Options: IPageOptions[] = [
+  { value: '18-19 años' },
+  { value: '30-39 años' },
+  { value: '40-49 años' },
+  { value: '50+' },
+];
+
+const page4Options: IPageOptions[] = [
+  { value: 'Falta de lógica' },
+  { value: 'Baja velocidad' },
+  { value: 'falta de humor' },
+  { value: 'Final demasiado genérico' },
+];
+
+const page5Options: IPageOptions[] = [
+  { value: 'Hombre lobo' },
+  { value: 'Acción' },
+  { value: 'Royal Obsession' },
+  { value: 'Multimillonario' },
+  { value: 'Romance' },
+  { value: 'Adulto Joven' },
+  { value: 'Chico Malo' },
+];
+
 export const sp = {
   page2: {
     title: '¿Con qué género te identificas',
     text: 'Por favor, comparta cómo se identifica',
-    options: [{ 1: 'Femenino' }, { 2: 'Masculino' }, { 3: 'Otro' }],
+    options: JSON.stringify(page2Options),
   },
   page3: {
     title: '¿Cuál es su edad?',
-    options: [
-      { 1: '18-19 años' },
-      { 2: '30-39 años' },
-      { 3: '40-49 años' },
-      { 4: '50+' },
-    ],
+    options: JSON.stringify(page3Options),
   },
   page4: {
     title: '¿Qué es lo que más odias en un libro?',
-    options: [
-      { 1: 'Falta de lógica' },
-      { 2: 'Baja velocidad' },
-      { 3: 'falta de humor' },
-      { 4: 'Final demasiado genérico' },
-    ],
+    options: JSON.stringify(page4Options),
     button: 'Próximo',
   },
   page5: {
     title: '¿Cuáles son tus temas favoritos?',
     text: 'Elija hasta 3 temas que te gustan?',
-    options: [
-      { 1: 'Hombre lobo' },
-      { 2: 'Acción' },
-      { 3: 'Royal Obsession' },
-      { 4: 'Multimillonario' },
-      { 5: 'Romance' },
-      { 6: 'Adulto Joven' },
-      { 7: 'Chico Malo' },
-    ],
+    options: JSON.stringify(page5Options),
     button: 'Próximo',
   },
   loadingPage: { text: 'Encontrar colecciones para usted...' },

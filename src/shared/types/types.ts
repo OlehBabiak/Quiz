@@ -1,5 +1,6 @@
-import { LANGUAGES } from "../constants/i18n/constants";
+import { ISO_CODES, LANGUAGES_NAMES } from '../constants/i18n/constants';
 
 export interface Language {
-    lang: LANGUAGES
+  lang: LANGUAGES_NAMES;
+  iso: ISO_CODES;
 }

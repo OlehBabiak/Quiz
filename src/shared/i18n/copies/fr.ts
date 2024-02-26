@@ -1,40 +1,54 @@
+import { IPageOptions } from './types';
+
+const page2Options: IPageOptions[] = [
+  { value: 'Femelle' },
+  { value: 'Femelle' },
+  { value: 'Femelle' },
+];
+
+const page3Options: IPageOptions[] = [
+  { value: '18-19 ans' },
+  { value: '30-39 ans' },
+  { value: '40-49 ans' },
+  { value: '50+' },
+];
+
+const page4Options: IPageOptions[] = [
+  { value: 'Manque de logique' },
+  { value: 'Une vitesse lente' },
+  { value: 'Manque d’humour' },
+  { value: 'Fin beaucoup trop générique' },
+];
+
+const page5Options: IPageOptions[] = [
+  { value: 'Loup-garou' },
+  { value: 'Action' },
+  { value: 'Royal Obsession' },
+  { value: 'Milliardaire' },
+  { value: 'Romance' },
+  { value: 'Jeune Adulte' },
+  { value: 'Bad Boy' },
+];
+
 export const fr = {
   page2: {
     title: 'À quel genre vous identifiez-vous ?',
     text: 'Veuillez indiquer comment vous vous identifiez',
-    options: [{ 1: 'Femelle' }, { 2: 'Femelle' }, { 3: 'Femelle' }],
+    options: JSON.stringify(page2Options),
   },
   page3: {
     title: 'Quel est votre âge?',
-    options: [
-      { 1: '18-19 ans' },
-      { 2: '30-39 ans' },
-      { 3: '40-49 ans' },
-      { 4: '50+' },
-    ],
+    options: JSON.stringify(page3Options),
   },
   page4: {
     title: 'Qu’est-ce que tu détestes le plus dans un livre ?',
-    options: [
-      { 1: 'Manque de logique' },
-      { 2: 'Une vitesse lente' },
-      { 3: 'Manque d’humour' },
-      { 4: 'Fin beaucoup trop générique' },
-    ],
+    options: JSON.stringify(page4Options),
     button: 'Prochaine',
   },
   page5: {
     title: 'Quels sont vos sujets préférés ?',
     text: 'Choisissez jusqu’à 3 sujets que vous aimez',
-    options: [
-      { 1: 'Loup-garou' },
-      { 2: 'Action' },
-      { 3: 'Royal Obsession' },
-      { 4: 'Milliardaire' },
-      { 5: 'Romance' },
-      { 6: 'Jeune Adulte' },
-      { 7: 'Bad Boy' },
-    ],
+    options: JSON.stringify(page5Options),
     button: 'Prochaine',
   },
   loadingPage: { text: 'Trouver des collections pour vous...' },
