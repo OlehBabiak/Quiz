@@ -2,8 +2,8 @@ import { IPageOptions } from './types';
 
 const page2Options: IPageOptions[] = [
   { value: 'Femelle' },
-  { value: 'Femelle' },
-  { value: 'Femelle' },
+  { value: 'Mâle' },
+  { value: 'Autre' },
 ];
 
 const page3Options: IPageOptions[] = [

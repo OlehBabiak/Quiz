@@ -1,20 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { RouteNames } from 'routes';
 import PageQuestionComponent from 'shared/components/page-question/PageQuestionComponent';
+import { useTypedDispatch } from 'shared/hooks/hooks';
+import { setProgress } from 'store/slices/common-slice';
 
 const LoadingPage: React.FC = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const dispatch = useTypedDispatch();
 
-  const handleLanguageChange = (value: string) => {
-    navigate(RouteNames.EMAIL);
-  };
+  useEffect(() => {
+    dispatch(setProgress(0));
+    setTimeout(() => {
+      navigate(RouteNames.EMAIL);
+    }, 5000);
+  });
 
   return (
     <>
-      <PageQuestionComponent action={t('page5.text')} />
+      <div>LOADING...</div>
+      <PageQuestionComponent action={t('loadingPage.text')} />
     </>
   );
 };
