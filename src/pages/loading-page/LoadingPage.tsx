@@ -36,7 +36,7 @@ const LoadingPage: React.FC = () => {
 
   return (
     <div className="content-wrapper">
-      <Loader width={252} percent={30} />
+      <Loader width={252} percent={loadingPercent} />
       <PageQuestionComponent action={t('loadingPage.text')} />
     </div>
   );
