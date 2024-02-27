@@ -64,7 +64,8 @@ export const de = {
     button: 'Nächst',
   },
   resultPage: {
-    title: 'Danke für die Unterstützung und das Bestehen des Quiz',
+    title: 'Danke',
+    subTitle: 'für die Unterstützung und das Bestehen des Quiz',
     text: 'Meine Antworten herunterladen',
     button: 'Quiz wiederholen',
   },

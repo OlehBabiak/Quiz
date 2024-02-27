@@ -61,7 +61,8 @@ export const fr = {
     button: 'Prochaine',
   },
   resultPage: {
-    title: 'Merci de nous soutenir et de passer le quiz',
+    title: 'Merci',
+    subTitle: 'de nous soutenir et de passer le quiz',
     text: 'Télécharger mes réponses',
     button: 'Reprendre le questionnaire',
   },

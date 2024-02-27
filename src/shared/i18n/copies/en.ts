@@ -65,7 +65,8 @@ export const en = {
     button: 'Next',
   },
   resultPage: {
-    title: 'Thank you for supporting us and passing quiz',
+    title: 'Thank you',
+    subTitle: 'for supporting us and passing quiz',
     text: 'Download my answers',
     button: 'Retake quiz',
   },

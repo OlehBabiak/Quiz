@@ -7,3 +7,8 @@ export const nextButtonStyles = {
   borderRadius: '1000px',
   marginTop: '40px',
 };
+
+export const disabledButtonStyles = {
+  opacity: '0.5',
+  backgroundColor: '#8e1668',
+};

@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { IProgressBarProps } from './types';
 import './ProgressBar.scss';
 
-const ProgressBar: React.FC<IProgressBarProps> = ({ progress }) => {
+const ProgressBar: FC<IProgressBarProps> = ({
+  progress,
+}: IProgressBarProps) => {
   return (
     <div className="progress-bar">
       <div className="progress" style={{ width: `${progress * 20}%` }}></div>

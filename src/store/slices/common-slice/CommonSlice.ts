@@ -1,26 +1,29 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
-interface ICommonState {
+export interface IUserOrder {
+  title: string;
+  type: string;
+  answer: string;
+}
+
+export interface IUserOrders {
+  [key: string]: IUserOrder;
+}
+
+export interface ICommonState {
   progress: number;
-  user: {
-    order1: { title: string; type: string; answer: string };
-    order2: { title: string; type: string; answer: string };
-    order3: { title: string; type: string; answer: string };
-    order4: { title: string; type: string; answer: string };
-    order5: { title: string; type: string; answer: string };
-    order6: { title: string; type: string; answer: string };
-  };
+  user: IUserOrders;
 }
 
 const initialState: ICommonState = {
   progress: 0,
   user: {
-    order1: { title: '', type: '', answer: '' },
-    order2: { title: '', type: '', answer: '' },
-    order3: { title: '', type: '', answer: '' },
-    order4: { title: '', type: '', answer: '' },
-    order5: { title: '', type: '', answer: '' },
-    order6: { title: '', type: '', answer: '' },
+    order1: { title: 'No data', type: 'No data', answer: 'No data' },
+    order2: { title: 'No data', type: 'No data', answer: 'No data' },
+    order3: { title: 'No data', type: 'No data', answer: 'No data' },
+    order4: { title: 'No data', type: 'No data', answer: 'No data' },
+    order5: { title: 'No data', type: 'No data', answer: 'No data' },
+    order6: { title: 'No data', type: 'No data', answer: 'No data' },
   },
 };
 
@@ -73,6 +76,14 @@ export const commonSlice = createSlice({
       localStorage.clear();
       localStorage.setItem('data', JSON.stringify(state));
     },
+    setEmail: (
+      state,
+      { payload }: PayloadAction<ICommonState['user']['order6']>
+    ) => {
+      state.user.order6 = payload;
+      localStorage.clear();
+      localStorage.setItem('data', JSON.stringify(state));
+    },
   },
 });
 
@@ -83,6 +94,7 @@ export const {
   setThirdOrder,
   setFourthOrder,
   setFifthOrder,
+  setEmail,
 } = commonSlice.actions;
 
 export default commonSlice.reducer;

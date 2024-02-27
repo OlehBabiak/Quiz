@@ -61,7 +61,8 @@ export const sp = {
     button: 'Próximo',
   },
   resultPage: {
-    title: 'Gracias por apoyarnos y pasar el examen',
+    title: 'Gracias',
+    subTitle: 'por apoyarnos y pasar el examen',
     text: 'Descargar mis respuestas',
     button: 'Repetir el cuestionario',
   },

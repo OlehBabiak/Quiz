@@ -1,0 +1,48 @@
+@import "shared/styles/constants/index";
+
+.outer-ring {
+    position: relative;
+  
+    display: inline-block;
+    padding: 6px;
+    background-color: $purple900;
+    border-radius: 50%;
+  
+    canvas {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+    .percent {
+      position: absolute;
+      z-index: 5;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      padding: 6px;
+      background-color: $purple900;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: $font-weight-800;
+  
+      span {
+        display: block;
+        padding-top: 1px;
+        padding-left: 1px;
+        font-size: 3em;
+        color: $defaultWhite;
+        margin-right: 1px;
+      }
+  
+      sup {
+        color: $defaultWhite;
+        margin-bottom: 4px;
+        margin-left: 1px;
+      }
+    }
+  }
+  

@@ -28,6 +28,8 @@ const AboutBooksPage: FC = () => {
     false,
   ]);
 
+  const isNextButtonDisabled = checkboxStates.every((state) => !state);
+
   const [selectedValues, setSelectedValues] = useState<string[]>([]);
 
   const handleOptionSelector = () => {
@@ -76,6 +78,7 @@ const AboutBooksPage: FC = () => {
           title={t('page4.button')}
           onClick={() => handleOptionSelector()}
           styles={nextButtonStyles}
+          disabled={isNextButtonDisabled}
         />
       </div>
     </>
