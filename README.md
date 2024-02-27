@@ -13,5 +13,5 @@ Run `npm run build` to build the project. The build artifacts will be stored in 
 
 ## View
 
-The project is available on mobile devices with a screen width of up to 375px
+The project is available on mobile devices with a screen width of up to 430px
 
