@@ -23,7 +23,7 @@
     border: 2px solid $purple200;
 }
 
-/* Стилізація нового чекбокса */
+/* Styling a new checkbox */
 input[type="checkbox"]::before {
     content: ""; 
     display: inline-block;
@@ -32,19 +32,19 @@ input[type="checkbox"]::before {
     border: 1px solid $purple200;
     border-radius: 8px;
     background-color: $purple400;
-    margin-right: 10px; /* Простір між чекбоксом і текстом */
+    margin-right: 10px;
     vertical-align: middle;
     position: relative;
     left: -3px;
     top: -2px;
   }
   
-  /* Стилізація для вибраного чекбокса */
+  /* Styling for the selected checkbox */
   input[type="checkbox"]:checked::before {
     background-color: $purple200; /* Колір для вибраного чекбокса */
   }
   
-//   /* Стилізація для позначення галочки */
+//   /* Stylization to indicate a tick */
   input[type="checkbox"]:checked::after {
     content: "✔"; 
     font-size: 14px;

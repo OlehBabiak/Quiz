@@ -6,6 +6,7 @@ import Loader from 'shared/components/loader/Loader';
 import PageQuestionComponent from 'shared/components/page-question/PageQuestionComponent';
 import { useTypedDispatch } from 'shared/hooks/hooks';
 import { setProgress } from 'store/slices/common-slice';
+import './LoadingPage.scss';
 
 const LoadingPage: React.FC = () => {
   const { t } = useTranslation();
@@ -34,10 +35,10 @@ const LoadingPage: React.FC = () => {
   }, []);
 
   return (
-    <>
-      <Loader width={252} percent={loadingPercent} />
+    <div className="content-wrapper">
+      <Loader width={252} percent={30} />
       <PageQuestionComponent action={t('loadingPage.text')} />
-    </>
+    </div>
   );
 };
 

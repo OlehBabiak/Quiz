@@ -39,7 +39,7 @@ const Loader: React.FC<UserScoreProps> = ({ width, percent }) => {
     } else {
       console.error('Canvas context is not available.');
     }
-  }, [percent]); // Запускати ефект при зміні percent
+  }, [percent]);
 
   return (
     <div
